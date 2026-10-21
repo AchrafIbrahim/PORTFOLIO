@@ -221,13 +221,14 @@ section {
 .main-profile-left-head {
   display: flex;
   align-items: flex-start;
+  position: relative;
   gap: 20px;
   padding-bottom: 50px;
 }
 
 .main-profile-left-head h1 {
   font-family: "Archivo Black", sans-serif;
-  font-size: clamp(4rem, 12vw, 150px); /* ← responsive */
+  font-size: clamp(4rem, 12vw, 150px);
   font-weight: 900;
   letter-spacing: -0.1em;
   line-height: 0.9;
@@ -245,11 +246,12 @@ section {
   align-items: center;
   justify-content: center;
   transform: rotate(3deg);
-  top: 60px;
-  right: 40px;
-  z-index: 2;
+  top: 10px;
+  right: 20px;
+  z-index: 10;
   font-size: 18px;
   font-weight: normal;
+  white-space: nowrap;
 }
 
 .main-profile-left-body {
@@ -665,9 +667,24 @@ body.modal-open {
   overflow: hidden;
 }
 
-/*================ RESPONSIVE DESIGN ================*/
-@media (max-width: 1241px) {
+/*================ RESPONSIVE DESIGN ZOOM IN 110% ================*/
+@media (max-width: 1280px) {
   /*================ MAIN PROFILE HEADER ================*/
+  .main-profile-left-head {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .main-profile-left-head h4 {
+    position: relative; /* Ubah dari absolute ke relative */
+    top: auto;
+    right: auto;
+    transform: none;
+    rotate: 0deg;
+    width: 100%;
+    padding: 20px;
+  }
+
   .main-profile-left-body {
     flex-direction: column;
     align-items: flex-start;
@@ -675,3 +692,5 @@ body.modal-open {
     padding-bottom: 40px;
   }
 }
+
+/*================ RESPONSIVE DESIGN ZOOM IN 125% ================*/
