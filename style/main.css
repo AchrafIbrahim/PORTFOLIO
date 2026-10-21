@@ -254,8 +254,10 @@ section {
 
 .main-profile-left-body {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 40px;
   padding-bottom: 80px;
 }
 
@@ -265,6 +267,7 @@ section {
   width: fit-content;
   position: relative;
   rotate: -3deg;
+  max-width: 280px;
 }
 
 .main-profile-left-body-profilepicture-social {
@@ -299,11 +302,14 @@ section {
 
 .main-profile-left-body-roleandname {
   padding: 0px 10px 0px 0px;
+  width: fit-content;
 }
 
 .main-profile-left-body-roleandname h3 {
+  font-family: "Archivo Black", system-ui, sans-serif;
   font-weight: bold;
   font-size: 32px;
+  letter-spacing: -10%;
   color: #151515;
 }
 
@@ -657,4 +663,15 @@ section {
 
 body.modal-open {
   overflow: hidden;
+}
+
+/*================ RESPONSIVE DESIGN ================*/
+@media (max-width: 1241px) {
+  /*================ MAIN PROFILE HEADER ================*/
+  .main-profile-left-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding-bottom: 40px;
+  }
 }
