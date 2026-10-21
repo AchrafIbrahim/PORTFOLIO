@@ -198,6 +198,113 @@ section {
   width: 100%;
 }
 
+/*================ SIDE NAVBAR ================*/
+
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  transition:
+    opacity 0.3s ease 0.1s,
+    visibility 0.2s ease 0.1s;
+}
+
+.navbar-inner-sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 500px;
+  height: 100vh;
+  background-color: #151515;
+  z-index: 9999 !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  padding: 10px;
+}
+
+.navbar-inner-sidenav.is-open {
+  right: 0;
+}
+
+.navbar-inner-sidenav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0px 20px 0px 20px;
+  right: -100%;
+  width: 100%;
+}
+
+.navbar-inner-sidenav-menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #d0d0d0;
+  gap: 10px;
+  border-bottom: 0.1px solid rgba(208, 208, 208, 0.2);
+}
+
+.navbar-inner-sidenav-closebtn {
+  color: #d0d0d0;
+}
+
+.navbar-inner-sidenav-menu-list svg {
+  flex-shrink: 0;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  rotate: calc(-45deg);
+}
+
+.navbar-inner-sidenav-menu-list:hover,
+.navbar-inner-sidenav-closebtn:hover {
+  color: #ef8001;
+  cursor: pointer;
+  fill: #ef8001;
+}
+
+.navbar-inner-sidenav-menu-list:hover svg {
+  transform: translateY(-5px);
+}
+
+body.menu-open .navbar-hamburger {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 0s;
+}
+
+.menuOverlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.menuOverlay.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 /*============ MAIN PROFILE STYLE ============*/
 .main-profile {
   display: grid;
@@ -694,3 +801,16 @@ body.modal-open {
 }
 
 /*================ RESPONSIVE DESIGN ZOOM IN 125% ================*/
+@media (max-width: 1100px) {
+  .navbar-inner-nav {
+    display: none;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-inner-sidenav {
+    display: flex;
+  }
+}
