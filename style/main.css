@@ -946,7 +946,7 @@ body.modal-open {
   }
 
   .navbar-inner-brand-role {
-    font-size: 12px;
+    font-size: clamp(0.5rem, 3vw, 2.75rem);
   }
 
   .main-profile-left-head {

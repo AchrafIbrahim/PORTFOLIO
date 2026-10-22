@@ -752,3 +752,39 @@ body.modal-open {
     align-items: flex-start;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar-inner-brand-name {
+    font-size: clamp(1rem, 5vw, 2.75rem);
+  }
+
+  .navbar-inner-brand-role {
+    font-size: clamp(0.5rem, 3vw, 2.75rem);
+  }
+
+  .resume-header-left h1 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+    line-height: 1.1;
+  }
+
+  .resume-body-left-profile p,
+  .resume-body-left-profile span,
+  .education-list span,
+  .language-list span,
+  .experience-rightside span,
+  .experience-rightside li {
+    font-size: clamp(1rem, 3vw, 2.75rem);
+  }
+
+  .skills-item {
+    font-size: clamp(0.8rem, 3vw, 2.75rem);
+  }
+
+  .education-list h4 {
+    font-size: clamp(1.3rem, 3vw, 2.75rem);
+  }
+
+  .experience-rightside h4 {
+    font-size: clamp(1.3rem, 3vw, 2.75rem);
+  }
+}
