@@ -579,7 +579,7 @@ body.menu-open {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
   width: 100%;
 }
 
@@ -596,7 +596,7 @@ body.menu-open {
 
 .main-mindset-list li {
   width: 100%;
-  max-width: 1200px;
+  max-width: 880px;
   border-bottom: 1px solid #2a2a2a;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -817,5 +817,123 @@ body.modal-open {
 
   .navbar-inner-sidenav {
     display: flex;
+  }
+
+  .main-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/*================ RESPONSIVE DESIGN ZOOM IN 150% ================*/
+@media (max-width: 950px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/*================ RESPONSIVE DESIGN ZOOM IN 175% ================*/
+@media (max-width: 900px) {
+  .main-profile {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .main-profile-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-profile-left-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-profile-left-head h1 {
+    font-size: 150px;
+  }
+
+  .main-profile-left-head h4 {
+    transform: rotate(3deg);
+    padding: 10px;
+    width: 256px;
+    height: fit-content;
+  }
+
+  .main-profile-left-body {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+  }
+
+  .main-mindset-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .main-mindset-list li span {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .main-mindset-list li h3 {
+    font-size: 20px;
+  }
+
+  .main-mindset-list li p {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-right: 24px;
+  }
+
+  .main-mindset-list li svg {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .main-mindset-list-item {
+    position: relative;
+  }
+
+  .main-mindset-list li {
+    max-width: 100%;
+  }
+
+  .main-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
