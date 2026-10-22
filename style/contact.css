@@ -219,6 +219,118 @@ section {
   font-size: 20px;
 }
 
+/*================ SIDE NAVBAR ================*/
+
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  transition:
+    opacity 0.3s ease 0.1s,
+    visibility 0.2s ease 0.1s;
+}
+
+.navbar-inner-sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 500px;
+  height: 100vh;
+  background-color: #151515;
+  z-index: 9999 !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  padding: 10px;
+}
+
+.navbar-inner-sidenav.is-open {
+  right: 0;
+}
+
+.navbar-inner-sidenav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0px 20px 0px 20px;
+  right: -100%;
+  width: 100%;
+}
+
+.navbar-inner-sidenav-menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #d0d0d0;
+  gap: 10px;
+  border-bottom: 0.1px solid rgba(208, 208, 208, 0.2);
+}
+
+.navbar-inner-sidenav-closebtn {
+  color: #d0d0d0;
+}
+
+.navbar-inner-sidenav-menu-list svg {
+  flex-shrink: 0;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  rotate: calc(-45deg);
+}
+
+.navbar-inner-sidenav-menu-list:hover,
+.navbar-inner-sidenav-closebtn:hover {
+  color: #ef8001;
+  cursor: pointer;
+  fill: #ef8001;
+}
+
+.navbar-inner-sidenav-menu-list:hover svg {
+  transform: translateY(-5px);
+}
+
+body.menu-open .navbar-hamburger {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition-delay: 0s;
+}
+
+body.menu-open {
+  overflow: hidden !important;
+}
+
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.menuOverlay.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 /*============ CONTACT LEFT SIDE ============*/
 .contact-desc {
   display: flex;
@@ -269,6 +381,13 @@ section {
   align-items: center;
   gap: 10px;
   color: #f8f6f6;
+  transition: color 0.3s ease;
+}
+
+.contact-desc-list-email:hover,
+.contact-desc-list-phone:hover {
+  color: #ef8001;
+  cursor: pointer;
 }
 
 /*============ CONTACT RIGHT SIDE ============*/
@@ -500,4 +619,40 @@ section {
 
 body.modal-open {
   overflow: hidden;
+}
+
+/*================ RESPONSIVE DESIGN ZOOM IN 125% ================*/
+@media (max-width: 1100px) {
+  .navbar-inner-nav {
+    display: none;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-inner-sidenav {
+    display: flex;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*================ RESPONSIVE DESIGN ZOOM IN 150% ================*/
+@media (max-width: 950px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
