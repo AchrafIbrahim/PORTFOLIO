@@ -115,7 +115,7 @@ footer {
 
 .navbar-inner-brand-name {
   font-family: "Archivo Black", sans-serif;
-  font-size: 32px;
+  font-size: clamp(1.125rem, 5vw, 2rem);
   font-weight: 800;
   letter-spacing: -0.1em;
   color: #f8f6f6;
@@ -936,5 +936,16 @@ body.modal-open {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/*================ RESPONSIVE DESIGN PHONE ================*/
+@media (max-width: 480px) {
+  .navbar-inner-brand-name {
+    font-size: 20px;
+  }
+
+  .navbar-inner-brand-role {
+    font-size: 12px;
   }
 }
