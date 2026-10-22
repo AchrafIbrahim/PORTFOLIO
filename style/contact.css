@@ -657,3 +657,26 @@ body.modal-open {
     align-items: flex-start;
   }
 }
+
+/*================ RESPONSIVE DESIGN MOBILE ================*/
+@media (max-width: 480px) {
+  .navbar-inner-brand-name {
+    font-size: clamp(1rem, 5vw, 2.75rem);
+  }
+
+  .navbar-inner-brand-role {
+    font-size: clamp(0.5rem, 3vw, 2.75rem);
+  }
+
+  .contact-desc-header h1 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+    line-height: 1.1;
+  }
+
+  .contact-desc-body p,
+  .contact-desc-list-email,
+  .contact-desc-list-phone,
+  .contact-desc-list-location {
+    font-size: clamp(1rem, 3vw, 2.75rem);
+  }
+}
