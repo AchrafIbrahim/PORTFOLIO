@@ -670,3 +670,40 @@ body.modal-open {
     align-items: flex-start;
   }
 }
+
+/*================ RESPONSIVE DESIGN PHONE ================*/
+@media (max-width: 480px) {
+  .navbar-inner-brand-name {
+    font-size: clamp(1rem, 5vw, 2.75rem);
+  }
+
+  .navbar-inner-brand-role {
+    font-size: clamp(0.5rem, 3vw, 2.75rem);
+  }
+
+  .project-header-left h1 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+    line-height: 1.1;
+  }
+
+  .project-card-img-container {
+    height: 150px;
+  }
+
+  .project-card-img-container img {
+    height: 100%;
+  }
+
+  .project-title {
+    font-size: clamp(1.3rem, 3vw, 2.75rem);
+  }
+
+  .project-role,
+  .project-card-desc-body p {
+    font-size: clamp(1rem, 3vw, 2.75rem);
+  }
+
+  .project-contact h2 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+}

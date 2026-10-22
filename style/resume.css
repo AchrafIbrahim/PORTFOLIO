@@ -753,6 +753,7 @@ body.modal-open {
   }
 }
 
+/*================ RESPONSIVE DESIGN PHONE ================*/
 @media (max-width: 480px) {
   .navbar-inner-brand-name {
     font-size: clamp(1rem, 5vw, 2.75rem);
