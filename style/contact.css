@@ -272,6 +272,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: clamp(1.5rem, 2vw, 150px);
   color: #d0d0d0;
   gap: 10px;
   border-bottom: 0.1px solid rgba(208, 208, 208, 0.2);
