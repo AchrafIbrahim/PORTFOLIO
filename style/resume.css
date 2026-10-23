@@ -754,6 +754,30 @@ body.modal-open {
   }
 }
 
+/*================ RESPONSIVE DESIGN TABLET ================*/
+@media (max-width: 768px) {
+  .navbar-inner {
+    gap: 10px;
+    align-items: center;
+  }
+
+  .navbar-inner-brand-name {
+    font-size: 1.25rem;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+  }
+
+  .navbar-inner-brand-role {
+    font-size: 0.75rem;
+    white-space: nowrap;
+    display: none; /*Hide role in mobile*/
+  }
+
+  .navbar-hamburger {
+    flex-shrink: 0;
+  }
+}
+
 /*================ RESPONSIVE DESIGN PHONE ================*/
 @media (max-width: 480px) {
   .navbar-inner-brand-name {
