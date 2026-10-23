@@ -593,6 +593,14 @@ body.menu-open {
   max-width: 880px;
   margin: 0 auto;
   width: 100%;
+  box-sizing: border-box;
+}
+
+.main-mindset-list-item p {
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
 }
 
 .main-mindset-list li {
