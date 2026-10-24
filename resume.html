@@ -332,7 +332,7 @@
       });
 
       modal.addEventListener("close", () => {
-        document.body.classList.remove("modal-open"); // ← LEPAS KUNCI
+        document.body.classList.remove("modal-open");
       });
 
       // ================ OPEN RESUME PAGE ================
@@ -357,29 +357,27 @@
         const sidenav = document.getElementById("navbar-inner-sidenav");
         const overlay = document.getElementById("menuOverlay");
 
-        // 2. Fungsi Buka Menu
         function openMenu() {
           sidenav.classList.add("is-open");
-          if (overlay) overlay.classList.add("is-open"); // Pastikan overlay ada
-          document.body.classList.add("menu-open"); // Untuk memudarkan navbar
+          if (overlay) overlay.classList.add("is-open");
+          document.body.classList.add("menu-open");
         }
 
-        // 3. Fungsi Tutup Menu
         function closeMenu() {
           sidenav.classList.remove("is-open");
           if (overlay) overlay.classList.remove("is-open");
           document.body.classList.remove("menu-open");
         }
 
-        // 4. Event Listener (Pasang aksi klik)
+        // Close navbar when click outside
         hamburgerBtn.addEventListener("click", openMenu);
         closeBtn.addEventListener("click", closeMenu);
 
         if (overlay) {
-          overlay.addEventListener("click", closeMenu); // Tutup jika klik area gelap
+          overlay.addEventListener("click", closeMenu);
         }
 
-        // 5. Tutup otomatis jika layar di-zoom out (melebar)
+        // Close navbar when zoom out
         window.addEventListener("resize", () => {
           if (window.innerWidth > 1100) {
             closeMenu();
