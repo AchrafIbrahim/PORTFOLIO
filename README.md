@@ -3,7 +3,8 @@
 A responsive portfolio website built with Vanilla HTML, CSS, and JavaScript.
 
 ## 🚀 Live Demo
-[Click here to view the live site](https://personal-portfolio.ibrahaji01.workers.dev/) 
+[https://personal-portfolio.ibrahaji01.workers.dev](https://personal-portfolio.ibrahaji01.workers.dev/)
+Above is the project page URL
 
 ## 🛠️ How to Run Locally
 
